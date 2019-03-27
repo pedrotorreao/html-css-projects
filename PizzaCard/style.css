@@ -1,0 +1,121 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* 
+GREEN: #67b26f
+BLUE: #4ca2cd
+HID: #5aaa9d
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #444;
+    font-family: Roboto;
+    padding: 50px;
+    background: linear-gradient(to bottom right, #67b26f, #4ca2cd);
+    height: 100vh;
+    display: flex;
+    align-items: center; /*cross axis*/ 
+    justify-content: center; /*main axis*/
+
+}
+
+.pizza {
+    max-width: 800px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px 10px rgba(0,0,0,.2);
+    /* 
+        box-shadow: x y z w rgba(m,n,o,p)
+        x: shadow in the x direction (left -> right)
+        y: shadow in the y direction (top -> bottom)
+        z: amount of blur
+        w: how far the blur should come out
+        m, n, o: color
+        p: opacity
+    */
+    display: flex;
+    align-items: stretch;
+}
+
+.pizza__hero {
+    flex: 0 0 45%;
+    /*
+        flex: x y z
+        x: flex growth
+        y: flex shrink
+        z: flex basis (width)
+    */
+}
+.pizza__img {
+    width: 100%;
+    display: block;
+}
+
+.pizza__content {
+    flex: 1;
+    background: white;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.pizza__price {
+    flex: 0 0 50px;
+    background: linear-gradient(to bottom, #67b26f, #4ca2cd);
+    writing-mode: vertical-rl;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pizza__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pizza__heading {
+    font-size: 20px;
+    margin-right: auto;
+}
+
+.pizza__tag {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: white;
+    padding: 2px 7px;
+    border-radius: 100px;
+    margin-left: 7px;
+
+}
+
+.pizza__tag--1 { background-color: #67b26f; }
+.pizza__tag--2 { background-color: #4ca2cd; }
+
+.pizza__details {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+.pizza__detail {
+    font-size: 15px;
+    text-transform: uppercase;
+    margin-right: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+.pizza__emoji {
+    font-size: 20px;
+    margin-right: 3px;
+}
