@@ -2,22 +2,67 @@
 // LOGO
 .logo {
     height: 3.25rem;
+    margin-left: 3rem;
 }
 
 ///////////////////////////////////////////
 // SEARCH
 .search {
-    &__input {
+    //background-color: orchid; //JUST FOR TESTING PURPOSES
+    flex: 0 0 40%; //flex: grow shrink basis, 2nd and 3rd optional
+    
+    //in order to center the button, the flex item 'search' becomes a flex container
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    &__input {
+        font-family: inherit;
+        font-size: inherit;
+        //These font properties don't automatically inherit the ones set for the global doc.
+        background-color: var(--color-grey-light-2);
+        border: none;
+        padding: .7rem 2rem;
+        border-radius: 1000px;
+        width: 90%;
+        transition: all .2s;
+        margin-right: -3.25rem; //move the input box to the right so the button lays on top of it
+
+        &:focus {
+            outline: none;
+            width: 100%; //of the parent element (search: 40% of the header)
+            background-color: var(--color-grey-light-3);
+        }
+
+        //changing the font size and weight of the placeholder
+        &::-webkit-input-placeholder {
+            font-weight: 100;
+            color: var(--color-grey-light-4);
+        }
+    }
+
+    //change the color of the button to match the input box when focused
+    &__input:focus + &__button {
+        background-color: var(--color-grey-light-3);
     }
 
     &__button {
+        border: none;
+        background-color: var(--color-grey-light-2);
 
+        &:focus {
+            outline: none; 
+        }
+
+        &:active {
+            transform: translateY(2px); //move the button down when pressed
+        }
     }
 
     &__icon {
         height: 2rem;
         width: 2rem;
+        fill: var(--color-grey-dark-3);
     }
 
 }
@@ -25,6 +70,7 @@
 ///////////////////////////////////////////
 // USER NAVIGATION
 .user-nav {
+
     &__icon-box {
 
     }

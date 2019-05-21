@@ -9,9 +9,15 @@
 }
 
 .header {
+    font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
     border-bottom: var(--color-grey-light-2);
+
+    display: flex; 
+    //.header is the parent of the logo, the search bar and the use elements.
+    justify-content: space-between; //align elemnts along the main axis (horizontal axis on this case)
+    align-items: center; //align elemnts along the cross axis (vertical axis on this case)
 }
 
 .content {
