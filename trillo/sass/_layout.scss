@@ -12,7 +12,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: var(--color-grey-light-2);
+    border-bottom: 1px solid var(--color-grey-light-2);
 
     display: flex; 
     //.header is the parent of the logo, the search bar and the use elements.
@@ -38,7 +38,7 @@
     background-color: #fff;
 
     height: 80rem;                 //testing
-    background-color: orangered; //testing
+    //background-color: orangered; //testing
 
     flex: 1; //same as flex-grow: 1;
 }
