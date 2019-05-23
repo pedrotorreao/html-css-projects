@@ -12,7 +12,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
     display: flex; 
     //.header is the parent of the logo, the search bar and the use elements.
@@ -37,8 +37,29 @@
 .hotel-view {
     background-color: #fff;
 
-    height: 80rem;                 //testing
+    //height: 80rem;                 //testing
     //background-color: orangered; //testing
 
     flex: 1; //same as flex-grow: 1;
+}
+
+.detail {
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+}
+
+.description {
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+}
+
+.user-reviews {
+    background-color: aquamarine;
+    flex: 1;
 }

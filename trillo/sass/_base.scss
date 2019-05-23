@@ -1,5 +1,5 @@
 
-:root {
+:root { //available through the entire document aka global parent element
     --color-primary: #eb2f64;
     --color-primary-light: #FF3366;
     --color-primary-dark: #BA265D;
@@ -14,6 +14,9 @@
     --color-grey-dark-3: #999;
 
     --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
+    --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+
+    --line: 1px solid var(--color-grey-light-2);
 }
 
 // ---- GLOBAL RESET ---- 
