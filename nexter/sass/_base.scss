@@ -35,6 +35,17 @@ body {
 
 .container {
   display: grid;
+
   grid-template-rows: 80vh min-content 40vw repeat(3,min-content);
-  //grid-template-columns: ;
+
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end] ) [center-end] minmax(6rem, 1fr) [full-end];
+  // the 1fr columns are extra columns in order to center the content between the end of the sidebar and the viewport
+  // 1140px/8col ~ 142px ~ 14rem
+  // 8 columns: each one with at least the width of its minimum content - min, and at max the defined width of 14rem
+
+  & > * {
+    padding: 40px; // FOR TESTING PURPOSES
+    font-size: 3rem;
+  }
+
 }
