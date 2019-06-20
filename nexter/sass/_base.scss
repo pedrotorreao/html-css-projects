@@ -43,9 +43,5 @@ body {
   // 1140px/8col ~ 142px ~ 14rem
   // 8 columns: each one with at least the width of its minimum content - min, and at max the defined width of 14rem
 
-  & > * {
-    padding: 40px; // FOR TESTING PURPOSES
-    font-size: 3rem;
-  }
 
 }
